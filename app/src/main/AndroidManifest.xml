@@ -14,7 +14,13 @@
         android:theme="@style/Theme.MyMemoryBox"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".SelectActionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddMemoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

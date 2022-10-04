@@ -7,4 +7,6 @@
     <dimen name="artistLeftMargin">-40dp</dimen>
     <dimen name="newLeftMargin">-30dp</dimen>
     <dimen name="topMargin">250dp</dimen>
+    <dimen name="buttonLen">170dp</dimen>
+    <dimen name="buttonWid">50dp</dimen>
 </resources>
