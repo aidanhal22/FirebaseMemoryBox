@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MyMemoryBox</string>
+    <string name="one">5.The BEST</string>
+    <string name="two">4.Really Great</string>
+    <string name="three">3.Average</string>
+    <string name="four">2.Not my favorite...</string>
+    <string name="five">1.The WORST</string>
+    <string name="title"></string>string>
+    <string-array name="spinnerList">
+        <item>@string/one</item>
+    </string-array>
 </resources>
