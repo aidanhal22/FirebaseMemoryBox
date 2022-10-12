@@ -1,12 +1,19 @@
+
 <resources>
-    <string name="app_name">MyMemoryBox</string>
-    <string name="one">5.The BEST</string>
-    <string name="two">4.Really Great</string>
-    <string name="three">3.Average</string>
-    <string name="four">2.Not my favorite...</string>
-    <string name="five">1.The WORST</string>
-    <string name="title"></string>string>
-    <string-array name="spinnerList">
-        <item>@string/one</item>
+    <string name="app_name">My Memory Box</string>
+    <string name="best">5. The BEST</string>
+    <string name="great">4. Really Great</string>
+    <string name="avg">3. Average</string>
+    <string name="notFav">2. Not my favorite...</string>
+    <string name="worst">1. The WORST</string>
+    <string name="title">Select a Memory Rating</string>
+
+    <string-array name = "spinnerList">
+        <item>@string/title</item>
+        <item>@string/best</item>
+        <item>@string/great</item>
+        <item>@string/avg</item>
+        <item>@string/notFav</item>
+        <item>@string/worst</item>
     </string-array>
 </resources>
