@@ -49,41 +49,41 @@ public class SignInActivity extends AppCompatActivity {
             // if successful, switch to next activity
 
         }
-        if (task.isSuccessful()){
-…
-        }
-
-        else {
-   /*
-   This prevents the app from CRASHING when the user enters bad items
-   (duplicate email or badly formatted email most likely)
-
-   https://stackoverflow.com/questions/37859582/how-to-catch-a-firebase-auth-specific-exceptions
-
-    */
-
-            try {
-                throw task.getException();
-            } catch (FirebaseAuthInvalidCredentialsException e) {
-                // poorly formatted email address
-                Toast.makeText(SignInActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.d("Aidan", "Sign up failed for " + userName + " " + password + e.getMessage());
-            } catch (FirebaseAuthEmailException e) {
-                // duplicate email used
-                Toast.makeText(SignInActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.d("Aidan", "Sign up failed for " + userName + " " + password + e.getMessage());
-            } catch (Exception e) {
-                Toast.makeText(SignInActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.d("Aidan", "Sign up failed for " + userName + " " + password + e.getMessage());
-            }
-
-
-            // this log message will tell the name of the exception.  If you want to add this to the catch
-            // statement above, then just add another catch above the generic one at the end
-
-            Log.d(TAG, "Sign up failed for " + userName + " " + password +
-                    " because of \n"+ task.getException());
-        }
+//        if (task.isSuccessful()){
+//…
+//        }
+//
+//        else {
+//   /*
+//   This prevents the app from CRASHING when the user enters bad items
+//   (duplicate email or badly formatted email most likely)
+//
+//   https://stackoverflow.com/questions/37859582/how-to-catch-a-firebase-auth-specific-exceptions
+//
+//    */
+//
+//            try {
+//                throw task.getException();
+//            } catch (FirebaseAuthInvalidCredentialsException e) {
+//                // poorly formatted email address
+//                Toast.makeText(SignInActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                Log.d("Aidan", "Sign up failed for " + userNameET + " " + passwordET + e.getMessage());
+//            } catch (FirebaseAuthEmailException e) {
+//                // duplicate email used
+//                Toast.makeText(SignInActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                Log.d("Aidan", "Sign up failed for " + userNameET + " " + passwordET + e.getMessage());
+//            } catch (Exception e) {
+//                Toast.makeText(SignInActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                Log.d("Aidan", "Sign up failed for " + userNameET + " " + passwordET + e.getMessage());
+//            }
+//
+//
+//            // this log message will tell the name of the exception.  If you want to add this to the catch
+//            // statement above, then just add another catch above the generic one at the end
+//
+//            Log.d("Aidan", "Sign up failed for " + userNameET + " " + passwordET +
+//                    " because of \n"+ task.getException());
+//        }
 
 
     }
