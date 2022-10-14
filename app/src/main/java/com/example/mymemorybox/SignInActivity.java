@@ -79,6 +79,8 @@ public class SignInActivity extends AppCompatActivity  {
                                 // we will implement this later
                                 // updateIfLoggedIn();
                                 // firebaseHelper.attachReadDataToUser();
+                                firebaseHelper.addUserToFirestore(userName, firebaseHelper.getmAuth().getUid());
+                                firebaseHelper.attachReadDataToUser();
 
                                 Intent intent = new Intent(SignInActivity.this, SelectActionActivity.class);
                                 startActivity(intent);
@@ -115,6 +117,8 @@ public class SignInActivity extends AppCompatActivity  {
                                 // firebaseHelper.attachReadDataToUser();
 
                                 Log.d(TAG, userName + " logged in");
+
+                                firebaseHelper.attachReadDataToUser();
 
                                 Intent intent = new Intent(SignInActivity.this, SelectActionActivity.class);
                                 startActivity(intent);
@@ -162,6 +166,31 @@ public class SignInActivity extends AppCompatActivity  {
             return true;
         }
     }
+
+    /**
+     * This method will check to see if a user is already signed it to the app.
+     * If a user is signed in, then they will be taken to SelectActionActivity
+     * instead of loading this main screen
+     */
+
+    public void updateUI() {
+        // if the user is already logged in, then they bypass this screen
+        Log.d(TAG, "inside updateUI: " + firebaseHelper.getmAuth().getUid());
+        if (firebaseHelper.getmAuth().getUid() != null) {
+            firebaseHelper.attachReadDataToUser();
+            Intent intent = new Intent(SignInActivity.this, SelectActionActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        updateUI();
+    }
+
 
 }
 
