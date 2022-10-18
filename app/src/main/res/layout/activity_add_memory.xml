@@ -15,42 +15,43 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintVertical_bias="0.132" />
 
     <EditText
         android:id="@+id/memoryRatingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Name of Memory"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Select a Memory Rating"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintVertical_bias="0.295" />
 
     <EditText
         android:id="@+id/descriptionEditText"
-        android:layout_width="295dp"
-        android:layout_height="401dp"
+        android:layout_width="286dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Description"
+        android:hint="Description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.532" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="164dp"
         android:layout_height="50dp"
         android:text="Add Memory"
+        android:onClick="addMemoryButtonClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -58,14 +59,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.943" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="268dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="28dp"
-        android:text="Add A Memory"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

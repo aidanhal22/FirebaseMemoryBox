@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SelectActionActivity extends AppCompatActivity {
 
-    public final String TAG = "Denna";
+    public final String TAG = "Halvadia";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
