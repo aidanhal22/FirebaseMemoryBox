@@ -4,10 +4,11 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Memory implements Parcelable{
-    private int rating, imageResourceId;
+    private int rating;
+    private String imageResourceId;
     private String name, desc;
 
-    public Memory(int rating, int imageResourceId, String name, String desc) {
+    public Memory(int rating, String imageResourceId, String name, String desc) {
         this.rating = rating;
         this.imageResourceId = imageResourceId;
         this.name = name;
@@ -16,14 +17,14 @@ public class Memory implements Parcelable{
 
     public Memory(int rating, String name, String desc) {
         this.rating = rating;
-        this.imageResourceId = 0;
+        this.imageResourceId = "No DocId yet";
         this.name = name;
         this.desc = desc;
     }
 
     public Memory() {
         this.rating = 0;
-        this.imageResourceId = 0;
+        this.imageResourceId = "No DocId yet";
         this.name = "";
         this.desc = "";
     }
@@ -51,7 +52,7 @@ public class Memory implements Parcelable{
     // of these methods it should match what you have in your original constructor
     public Memory(Parcel parcel) {
         rating = parcel.readInt();
-        imageResourceId = parcel.readInt();
+        imageResourceId = parcel.readString();
         name = parcel.readString();
         desc = parcel.readString();
     }
@@ -71,7 +72,7 @@ public class Memory implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(rating);
-        dest.writeInt(imageResourceId);
+        dest.writeString(imageResourceId);
         dest.writeString(name);
         dest.writeString(desc);
     }
@@ -84,11 +85,11 @@ public class Memory implements Parcelable{
         this.rating = rating;
     }
 
-    public int getImageResourceId() {
+    public String getImageResourceId() {
         return imageResourceId;
     }
 
-    public void setImageResourceId(int imageResourceId) {
+    public void setImageResourceId(String imageResourceId) {
         this.imageResourceId = imageResourceId;
     }
 

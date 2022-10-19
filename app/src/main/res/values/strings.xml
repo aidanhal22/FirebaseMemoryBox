@@ -1,4 +1,3 @@
-
 <resources>
     <string name="app_name">My Memory Box</string>
     <string name="best">5. The BEST</string>
@@ -8,7 +7,7 @@
     <string name="worst">1. The WORST</string>
     <string name="title">Select a Memory Rating</string>
 
-    <string-array name = "spinnerList">
+    <string-array name="spinnerList">
         <item>@string/title</item>
         <item>@string/best</item>
         <item>@string/great</item>
